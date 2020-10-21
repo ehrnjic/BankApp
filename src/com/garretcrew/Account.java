@@ -16,8 +16,6 @@ public abstract class Account implements IBaseRate {
         this.sSN = sSN;
         this.balance = initDeposit;
 
-        System.out.println("NAME: " + name + " SSN: " + sSN + " BALANCE: " + balance);
-
         //Set acc number
         this.accountNumber = setAccountNumber();
 
@@ -27,6 +25,13 @@ public abstract class Account implements IBaseRate {
         UID++;
         return sSN.substring(sSN.length()-2, sSN.length()) + UID + (int) (Math.random() * Math.pow(10, 3));
     }
-    // List common methods
 
+    // List common methods
+    public void showInfo() {
+        System.out.println(
+                "MANE: " + name +
+                "\nACCOUNT NUMBER: " + accountNumber +
+                "\nBALANCE: " + balance
+        );
+    }
 }
