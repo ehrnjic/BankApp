@@ -2,13 +2,13 @@ package com.garretcrew;
 
 public abstract class Account implements IBaseRate {
     // List common properties for checking and saving accounts
-    String name;
-    String sSN;
-    double balance;
+    private String name;
+    private String sSN;
+    private double balance;
 
-    static int UID = 10000;
-    String accountNumber;
-    double rate;
+    private static int UID = 10000;
+    protected String accountNumber;
+    protected double rate;
 
     // Constructor to set base properties and initialize accounts
     public Account(String name, String sSN, double initDeposit) {

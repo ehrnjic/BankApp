@@ -18,6 +18,7 @@ public class BankAccountApp {
         savacc1.transfer("Raiffeisen Saving", 389);
         System.out.println("*********************");
         savacc1.compound();
+        
 
         // Read a CSV file then create new accounts based on that data
 

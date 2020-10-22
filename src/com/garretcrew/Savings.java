@@ -2,8 +2,8 @@ package com.garretcrew;
 
 public class Savings extends Account{
     // List properties specific to a Saving account
-    int safetyDepositBoxID;
-    int safetyDepositBoxKey;
+    private int safetyDepositBoxID;
+    private int safetyDepositBoxKey;
 
     // Constructor to initialize settings saving account properties
     public Savings(String name, String sSN, double initDeposit) {
