@@ -28,22 +28,29 @@ public abstract class Account implements IBaseRate {
         return sSN.substring(sSN.length()-2, sSN.length()) + UID + (int) (Math.random() * Math.pow(10, 3));
     }
 
+    public void compound(){
+        double accuredInterest = balance * (rate/100);
+        balance = balance + accuredInterest;
+        System.out.println("Accrued interest $:" + accuredInterest);
+        printBalance();
+    }
+
     // List common methods
     public void deposit(double amount){
         balance = balance + amount;
-        System.out.println("Depositing $:" + amount);
+        System.out.println("Depositing $:" + amount + " to account:" + accountNumber);
         printBalance();
     }
 
     public void withdraw(double amount){
         balance = balance - amount;
-        System.out.println("Withdrawing $:" + amount);
+        System.out.println("Withdrawing $:" + amount + " from account:" + accountNumber);
         printBalance();
     }
 
     public void transfer(String toWhere, double amount){
         balance = balance - amount;
-        System.out.println("Transferring $" + amount + " to " + toWhere);
+        System.out.println("Transferring $" + amount + " from account:" + accountNumber+ " to " + toWhere);
         printBalance();
     }
 
